@@ -2,4 +2,4 @@
 CAD/CAM portion of new school website
 
 
-https://mustafabin.github.io/CADwebsite-/
+https://mustafabin.github.io/CADwebsite/

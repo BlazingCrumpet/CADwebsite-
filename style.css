@@ -1,3 +1,5 @@
-h1{
-	color: red;
+@media screen and (max-width: 455px) {
+    .h3 {
+        font-size:16px;
+    }
 }

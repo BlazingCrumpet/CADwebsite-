@@ -6,16 +6,106 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript" src="script.js"></script>
+	  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- favicon -->
+  <link rel="icon" type="image/png" href="img/fav.ico">
+<!-- end of favicon -->
+
+<!-- Boostrap and font awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css"> 
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css"><link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/index.css"> 
+<script>
+	(function ($) {
+  $(document).click(function(){
+
+    // hide .navbar first
+    $(".navbar").hide();
+
+    $("#img1").click(function(evt){
+        add_task(document.getElementById("img1"));
+        });
+   });
+
+   
+  }(jQuery));
+
+ function add_task(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+}
+</script>
+<!-- end of Bootstrap and font awesome -->
 </head>
 <!-- the code below is responible for the side bar/-->
- <body style="background:#e6e6e6;color:black;">
+ <body>
+	<nav style="background-color: #b232b2" class="navbar navbar-default navbar-fixed-top">
+		  <div class="container">
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>         </button>
+		      <a class="navbar-brand" href="main.html"><img src="https://raw.githubusercontent.com/Tahfimul/hillcrest.github.io/master/fav.ico" width="50px" /></a>
+		    </div>
+		    <div class="collapse navbar-collapse" id="myNavbar">
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="about.html">ABOUT</a></li>
+		        <li><a href="slc.html">SLCs</a></li>
+		        <li><a href="academics.html">ACADEMICS</a></li>
+		        <li><a href="departments.html">DEPARTMENTS</a></li>
+		        <li class="active"><a href="highlighter.html">HIGHLIGHTER</a></li>
+		        <li><a href="sports.html">SPORTS</a></li>
+		        <li><a href="contact.html">CONTACT</a></li>
+		        <li><a href="college.html">COLLEGE</a></li>
+		     </ul>
+		    </div>
+		  </div>
+	</nav>
+
+
 	<div class="w3-sidebar w3-light-grey w3-card-4 w3-animate-left" style="width: 180px; display: block;" id="mySidebar">
 	  <div class="w3-bar w3-dark-grey">
 	  <span class="w3-bar-item w3-padding-16">Content</span>
 	  <button onclick="w3_close()" class="w3-bar-item w3-button w3-right w3-padding-16" title="close Sidebar">×</button>
 	  </div>
 	  <div class="w3-bar-block">
-	  <a class="w3-bar-item w3-button w3-green" href="javascript:void(0)">Home</a>
+	  <a class="w3-bar-item w3-button w3-purple" href="javascript:void(0)">Home</a>
 	  <a class="w3-bar-item w3-button" href="javascript:void(0)">About</a>
 	  <a class="w3-bar-item w3-button" href="javascript:void(0)">Contact</a>
 	  <div class="w3-dropdown-hover">

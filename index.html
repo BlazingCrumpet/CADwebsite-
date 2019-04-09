@@ -14,143 +14,118 @@
   <script src='script.js'></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="index.json"></script>
+  <style type="text/css">
+  	#CADcontainer{
+  		width: 900px;
+  		font-family: "Open Sans", sans-serif; 
+  	}
+  </style>
 </head>
+
 <body>
-   <br><br><br>
-
-
-	<div class="w3-sidebar w3-light-grey w3-card-4 w3-animate-left" style="width: 180px; display: block;" id="mySidebar">
-	  <div class="w3-bar w3-dark-grey">
-	  <span class="w3-bar-item w3-padding-16">Content</span>
-	  <button onclick="w3_close()" class="w3-bar-item w3-button w3-right w3-padding-16" title="close Sidebar">×</button>
-	  </div>
-	  <div class="w3-bar-block">
-	  <a class="w3-bar-item w3-button w3-purple" href="javascript:void(0)">Home</a>
-	  <a class="w3-bar-item w3-button" href="javascript:void(0)">About</a>
-	  <a class="w3-bar-item w3-button" href="javascript:void(0)">Contact</a>
-	  <div class="w3-dropdown-hover">
-	    <a class="w3-button" href="javascript:void(0)">Dropdown <i class="fa fa-caret-down"></i></a>
-	    <div class="w3-dropdown-content w3-bar-block w3-card-4">
-	      <a class="w3-bar-item w3-button" href="javascript:void(0)">Link 1</a>
-	      <a class="w3-bar-item w3-button" href="javascript:void(0)">Link 2</a>
-	      <a class="w3-bar-item w3-button" href="javascript:void(0)">Link 3</a>
+<div style="background-image: linear-gradient(#e0ebeb, 	#ffffff);" id="wholePage">
+	<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>                        
+	      </button>
+	      <a class="navbar-brand" href="index.html"><img src="img/fav.ico" width="50px" /></a>
 	    </div>
+	  <div class="container">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>                        
+	      </button>
+	       <div class="dropdown">
+	      <button class="dropbtn" onclick="about()">About</button>
+	      </div>
+	     <div class="dropdown">
+	  <button class="dropbtn">SLCs</button>
+	  <div class="dropdown-content">
+	    <a href="slc.html#biztek">Biztek</a>
+	    <a href="slc.html#pre-med">Pre-Med</a>
+	    <a href="slc.html#public-service">Public Service</a>
+	    <a href="slc.html#theatre#">Theatre</a>
+	    <a href="slc.html#teachers#">Teachers of Tomorrow</a>
+	    <a href="slc.html#media-arts">Media Arts</a>
+	    <a href="slc.html#global-citizens">Global Citizens</a>
 	  </div>
-	  <a class="w3-bar-item w3-button" href="javascript:void(0)">Support</a>
+	</div>
+	 <div class="dropdown">
+	  <button class="dropbtn">Sports</button>
+	  <div class="dropdown-content">
+	    <a href="sports.html#track">Track&Field</a>
+	    <a href="sports.html#wrestling">Wrestling</a>
+	    <a href="sports.html#gym">Gymnastics</a>
+	    <a href="sports.html#basketball">Basketball</a>
+	    <a href="sports.html#soccer">Soccer</a>
+	    <a href="sports.html#bowling">Bowling</a>
+	    <a href="sports.html#tennis">Tennis</a>
+	    <a href="sports.html#cross-country">Cross Country</a>
+	    <a href="sports.html#baseball">Baseball</a>
+	    <a href="sports.html#softball">Softball</a>
+	    <a href="sports.html#cricket">Cricket</a>
+	    <a href="sports.html#golf">Golf</a>
 	  </div>
 	</div>
-
-	<div id="main" style="margin-left: 180px;">
-	<div class="w3-container w3-display-container">
-	  <span title="open Sidebar" style="display: none;" id="openNav" class="w3-button w3-transparent w3-display-topleft w3-xlarge" onclick="w3_open()">☰</span>
-	  <h3 class="h3" style="position:fixed;top:36px;">My Page</h3>
+	<div class="dropdown">
+	  <button class="dropbtn">Academics</button>
+	  <div class="dropdown-content">
+	    <a href="academics.html#cte">CTE</a>
+	    <a href="academics.html#hillcrest-life">Life at Hillcrest</a>
+	    <a href="academics.html#ap">AP for all</a>
+	    <a href="academics.html#ap-c">AP Courses</a>
+	    <a href="academics.html#non-ap">NON-AP Courses</a>
+	    <a href="academics.html#extracurricular">ExtraCurriculars</a>
+	    <a href="academics.html#vei">VEI</a>
+	    <a href="#">placeholder</a>
+	  </div>
 	</div>
+	<div class="dropdown">
+	  <button class="dropbtn">Departments</button>
+	  <div class="dropdown-content">
+	    <a href="departments.html#english">English</a>
+	    <a href="departments.html#math">Mathematics</a>
+	    <a href="departments.html#science">Science</a>
+	    <a href="departments.html#foreign-language">Foreign Language/LOTE</a>
+	    <a href="departments.html#social-studies">Social Studies</a>
+	    <a href="departments.html#library">Library</a>
+	  </div>
 	</div>
+	   <div class="dropdown">
+	      <button class="dropbtn" onclick="highlighter()">Highlighter</button>
+	      </div>
+	    </div>
+	    <div class="dropdown">
+	      <button class="dropbtn" onclick="contact()">Contact</button>
+	      </div>
+	  </div>
+	</nav>
 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="index.html"><img src="img/fav.ico" width="50px" /></a>
-    </div>
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-       <div class="dropdown">
-      <button class="dropbtn" onclick="about()">About</button>
-      </div>
-     <div class="dropdown">
-  <button class="dropbtn">SLCs</button>
-  <div class="dropdown-content">
-    <a href="slc.html#biztek">Biztek</a>
-    <a href="slc.html#pre-med">Pre-Med</a>
-    <a href="slc.html#public-service">Public Service</a>
-    <a href="slc.html#theatre#">Theatre</a>
-    <a href="slc.html#teachers#">Teachers of Tomorrow</a>
-    <a href="slc.html#media-arts">Media Arts</a>
-    <a href="slc.html#global-citizens">Global Citizens</a>
-  </div>
+
+	<br><br><br>
+
+<center>
+	<div id="CADcontainer">
+
+			<h1>CAD/CAM</h1>
+
+			<p>Computer-aided CAD/CAM is about PC supported plan and building. We get familiar with an assortment of things, for example, the standards of building, mechanical material science and an assortment of virtual products utilized for designing and plan. Understudies additionally find out about delicate and hard aptitudes to better themselves in reality.
+			</p>
+			<div class="MagicScroll" data-options="mode: carousel; height: 275px;">
+			    <img src="example1.jpg" />
+			    <img src="example2.jpg" />
+			</div>
+
+
+	</div>
+</center>
 </div>
- <div class="dropdown">
-  <button class="dropbtn">Sports</button>
-  <div class="dropdown-content">
-    <a href="sports.html#track">Track&Field</a>
-    <a href="sports.html#wrestling">Wrestling</a>
-    <a href="sports.html#gym">Gymnastics</a>
-    <a href="sports.html#basketball">Basketball</a>
-    <a href="sports.html#soccer">Soccer</a>
-    <a href="sports.html#bowling">Bowling</a>
-    <a href="sports.html#tennis">Tennis</a>
-    <a href="sports.html#cross-country">Cross Country</a>
-    <a href="sports.html#baseball">Baseball</a>
-    <a href="sports.html#softball">Softball</a>
-    <a href="sports.html#cricket">Cricket</a>
-    <a href="sports.html#golf">Golf</a>
-  </div>
-</div>
-<div class="dropdown">
-  <button class="dropbtn">Academics</button>
-  <div class="dropdown-content">
-    <a href="academics.html#cte">CTE</a>
-    <a href="academics.html#hillcrest-life">Life at Hillcrest</a>
-    <a href="academics.html#ap">AP for all</a>
-    <a href="academics.html#ap-c">AP Courses</a>
-    <a href="academics.html#non-ap">NON-AP Courses</a>
-    <a href="academics.html#extracurricular">ExtraCurriculars</a>
-    <a href="academics.html#vei">VEI</a>
-    <a href="#">placeholder</a>
-  </div>
-</div>
-<div class="dropdown">
-  <button class="dropbtn">Departments</button>
-  <div class="dropdown-content">
-    <a href="departments.html#english">English</a>
-    <a href="departments.html#math">Mathematics</a>
-    <a href="departments.html#science">Science</a>
-    <a href="departments.html#foreign-language">Foreign Language/LOTE</a>
-    <a href="departments.html#social-studies">Social Studies</a>
-    <a href="departments.html#library">Library</a>
-  </div>
-</div>
-   <div class="dropdown">
-      <button class="dropbtn" onclick="highlighter()">Highlighter</button>
-      </div>
-    </div>
-    <div class="dropdown">
-      <button class="dropbtn" onclick="contact()">Contact</button>
-      </div>
-  </div>
-</nav>
-
-
-
-
-
-
-
-<br><br><br>
-
-
-
-<h1>updated hillcrest pictures</h1>
-
-
-
-
-
-
-
-
-
-
-
+<footer>blank blank blank</footer>
 </body>
 </html>
